@@ -703,10 +703,6 @@ node-gyp@^4.0.0:
     tar "^4.4.8"
     which "1"
 
-node-thinkgear-sockets@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/node-thinkgear-sockets/-/node-thinkgear-sockets-0.0.1.tgz#227db78cec2b9e459cba2ec78baf8f7866746214"
-
 "nopt@2 || 3":
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/nopt/-/nopt-3.0.6.tgz#c6465dbf08abcd4db359317f79ac68a646b28ff9"

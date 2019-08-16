@@ -4,8 +4,7 @@
   "main": "main.js",
   "dependencies": {
     "electron": "^6.0.1",
-    "electron-rebuild": "^1.8.5",
-    "node-thinkgear-sockets": "^0.0.1"
+    "electron-rebuild": "^1.8.5"
   },
   "scripts": {
     "start": "electron .",

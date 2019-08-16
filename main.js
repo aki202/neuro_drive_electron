@@ -1,7 +1,5 @@
 const { app, BrowserWindow } = require('electron')
 
-let win
-
 const createWindow = () => {
   win = new BrowserWindow({
     width: 800,
@@ -15,7 +13,7 @@ const createWindow = () => {
 
   win.webContents.openDevTools()
 
-  win.on('closed',  () => {
+  win.on('closed', () => {
     win = null
   })
 }
