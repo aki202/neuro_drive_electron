@@ -13,7 +13,7 @@ class Road {
       this.y1     = -this.canvas.height
       this.y2     = 0
     }
-    this.img.src = 'img/road.png'
+    this.img.src = path.resolve('src/images/road.png')
   }
 
   draw() {

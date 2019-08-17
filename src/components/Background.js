@@ -11,7 +11,7 @@ class Background {
       this.y1 = -this.canvas.height
       this.y2 = 0
     }
-    this.img.src = 'img/pattern_shibafu.png'
+    this.img.src = path.resolve('src/images/pattern_shibafu.png')
   }
 
   draw() {

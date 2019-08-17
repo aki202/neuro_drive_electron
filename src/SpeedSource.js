@@ -7,7 +7,7 @@ class SpeedSource {
     this.timeRecordTimer
     this.goaled   = false
     this.stopping = false
-    this.se       = new Audio(path.resolve('src/save.wav'))
+    this.se       = new Audio(path.resolve('src/sounds/save.wav'))
 
 
     this.eegReceiver = eegReceiver

@@ -19,7 +19,7 @@ class Car {
       const ratio = this.img.width / this.width
       this.height = this.img.height / ratio
     }
-    this.img.src = 'img/red_car.png'
+    this.img.src = path.resolve('src/images/red_car.png')
 
     this.gm.eegReceiver.on('on_blink', data => {
       if (data.blinkStrength < 40) return

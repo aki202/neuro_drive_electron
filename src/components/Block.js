@@ -2,9 +2,8 @@ const POSITION = {
   left: 1,
   right: 2
 }
-const width    = 100
-const height   = 70
-const sePlayer = require(path.resolve('src/BgmPlayer.js'))
+const width  = 100
+const height = 70
 
 class Block {
   constructor(globalManager) {
@@ -12,14 +11,14 @@ class Block {
     this.ctx      = globalManager.canvas.getContext('2d')
     this.loaded   = false
     this.position = Math.random() > 0.5 ? POSITION.left : POSITION.right
-    this.se       = new Audio(path.resolve('src/explosion.wav'))
+    this.se       = new Audio(path.resolve('src/sounds/explosion.wav'))
 
     this.img = new Image()
     this.img.onload = () => {
       this.loaded = true
       this.y = -height
     }
-    this.img.src = 'img/block.png'
+    this.img.src = path.resolve('src/images/block.png')
   }
 
   x() {
