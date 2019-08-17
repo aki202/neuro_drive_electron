@@ -30,6 +30,13 @@ npm install
 npm start
 ```
 
+# Illusts and audios
+
+Thanks for its creators!
+
+- Illust-ya - https://www.irasutoya.com
+- Wingless Seraph - https://wingless-seraph.net
+
 # License
 
 MIT
