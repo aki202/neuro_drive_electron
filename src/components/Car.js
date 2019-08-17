@@ -23,6 +23,7 @@ class Car {
 
     this.gm.eegReceiver.on('on_blink', data => {
       if (data.blinkStrength < 40) return
+      console.log(`blink: strength=${data.blinkStrength}`)
       this.beginChanginLane()
     })
 

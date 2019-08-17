@@ -9,7 +9,7 @@ const BlockManager = require(path.resolve('src/managers/BlockManager.js'))
 class GlobalManager {
   constructor(canvas) {
     this.canvas       = canvas
-    this.maxMileage   = 700
+    this.maxMileage   = 500
     this.eegReceiver  = new EegReceiver()
     this.speedSource  = new SpeedSource(this.eegReceiver, this.maxMileage)
     this.background   = new Background(this)

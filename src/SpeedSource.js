@@ -15,7 +15,7 @@ class SpeedSource {
       if (this.stopping) return
       this.speed = data.eSense.attention * 1000
       if (this.speed < 0) this.speed = 0
-      //console.log('data', data.eSense.attention, this.speed)
+      console.log(`eeg: attention=${data.eSense.attention}`)
     })
     this.eegReceiver.connect()
 
