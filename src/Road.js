@@ -19,13 +19,15 @@ class Road {
   draw() {
     if (!this.loaded) return
 
+    const speed = this.speedSource.speedToDraw()
+
     const x = this.canvas.width / 2 - this.canvas.width/3 / 2
     this.ctx.drawImage(this.img, x, this.y1, this.canvas.width/3, this.canvas.height)
     this.ctx.drawImage(this.img, x, this.y2, this.canvas.width/3, this.canvas.height)
-    this.y1 += this.speedSource.speed
-    this.y2 += this.speedSource.speed
-    if (this.y1 > this.canvas.height) this.y1 = -this.canvas.height + this.speedSource.speed
-    if (this.y2 > this.canvas.height) this.y2 = -this.canvas.height + this.speedSource.speed
+    this.y1 += speed
+    this.y2 += speed
+    if (this.y1 > this.canvas.height) this.y1 = -this.canvas.height + speed
+    if (this.y2 > this.canvas.height) this.y2 = -this.canvas.height + speed
   }
 }
 

@@ -17,12 +17,14 @@ class Background {
   draw() {
     if (!this.loaded) return
 
+    const speed = this.speedSource.speedToDraw()
+
     this.ctx.drawImage(this.img, 0, this.y1, this.canvas.width, this.canvas.height)
     this.ctx.drawImage(this.img, 0, this.y2, this.canvas.width, this.canvas.height)
-    this.y1 += this.speedSource.speed
-    this.y2 += this.speedSource.speed
-    if (this.y1 > this.canvas.height) this.y1 = -this.canvas.height + this.speedSource.speed
-    if (this.y2 > this.canvas.height) this.y2 = -this.canvas.height + this.speedSource.speed
+    this.y1 += speed
+    this.y2 += speed
+    if (this.y1 > this.canvas.height) this.y1 = -this.canvas.height + speed
+    if (this.y2 > this.canvas.height) this.y2 = -this.canvas.height + speed
   }
 }
 

@@ -59,7 +59,7 @@ class Car {
     const width = this.canvas.width/6
     const ratio = width / this.width
     const height = this.height * ratio
-    this.ctx.drawImage(this.img, this.x, this.canvas.height*0.7, width, height)
+    this.ctx.drawImage(this.img, this.x, this.canvas.height*0.75, width, height)
   }
 }
 

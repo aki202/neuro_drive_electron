@@ -1,16 +1,39 @@
 class SpeedSource {
-  constructor(eegReceiver) {
-    this.speed = 0
+  constructor(eegReceiver, maxMileage) {
+    this.speed   = 0 // meter an hour
+    this.mileage = 0 // total meter
+    this.time    = 0
+    this.mileageMeasureTimer
+    this.timeRecordTimer
+    this.goaled  = false
 
     this.eegReceiver = eegReceiver
     this.eegReceiver.on('data', data => {
-      this.speed = data.eSense.attention / 10
+      this.speed = data.eSense.attention * 1000
       if (this.speed < 0) this.speed = 0
       //console.log('data', data.eSense.attention, this.speed)
     })
     this.eegReceiver.connect()
 
-    //setInterval(() => { this.speed = Math.random() * 10 }, 1000)
+    this.mileageMeasureTimer = setInterval(() => {
+      this.mileage += Math.round(this.speed / 36000)
+      if (this.mileage > maxMileage) {
+        this.mileage = maxMileage
+        clearInterval(this.mileageMeasureTimer)
+        this.goaled = true
+      }
+    }, 100)
+
+    this.timeRecordTimer = setInterval(() => {
+      this.time += 0.1
+      if (this.goaled) clearInterval(this.timeRecordTimer)
+    }, 100)
+
+    setInterval(() => { this.speed = Math.random() * 100  * 1000 }, 1000)
+  }
+
+  speedToDraw() {
+    return this.speed / 10000
   }
 }
 
