@@ -1,9 +1,9 @@
 class Road {
-  constructor(canvas, ctx, speedSource) {
-    this.canvas      = canvas
-    this.ctx         = ctx
+  constructor(globalManager) {
+    this.canvas      = globalManager.canvas
+    this.ctx         = globalManager.canvas.getContext('2d')
     this.loaded      = false
-    this.speedSource = speedSource
+    this.speedSource = globalManager.speedSource
 
     this.img = new Image()
     this.img.onload = () => {

@@ -1,9 +1,9 @@
 class Background {
-  constructor(canvas, ctx, speedSource) {
-    this.canvas      = canvas
-    this.ctx         = ctx
+  constructor(globalManager) {
+    this.canvas      = globalManager.canvas
+    this.speedSource = globalManager.speedSource
+    this.ctx         = this.canvas.getContext('2d')
     this.loaded      = false
-    this.speedSource = speedSource
 
     this.img = new Image()
     this.img.onload = () => {

@@ -1,6 +1,6 @@
 class Text {
-  constructor(canvas, options = {}) {
-    this.canvas  = canvas
+  constructor(globalManager, options = {}) {
+    this.canvas  = globalManager.canvas
     this.options = options
   }
 
