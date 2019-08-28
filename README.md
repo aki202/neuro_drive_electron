@@ -1,4 +1,7 @@
 # Neurodrive
+
+![Playing image](https://raw.githubusercontent.com/aki202/neuro_drive_electron/media/pv1.gif)
+
 This plain electron game is controlled by brain wave using MindWave Mobile.
 
 
